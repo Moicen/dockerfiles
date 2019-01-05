@@ -1,0 +1,19 @@
+set -x
+# install rbenv firstly
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+~/.rbenv/bin/rbenv init
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+. ~/.bash_profile
+
+# install rbenv-install
+mkdir -p "$(rbenv root)"/plugins
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+
+# install ruby 2.5.3
+rbenv install 2.5.3
+rbenv local 2.5.3
+gem install rails
+# install bunderl 1.17.3
+gem install bundler -v 1.17.3
+
