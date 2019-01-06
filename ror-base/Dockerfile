@@ -1,8 +1,8 @@
-FROM alpine:latest
+FROM alpine:3.8
 MAINTAINER Moicen Li (i@moicen.com)
 
 # packages
-RUN apk add bash curl git gcc g++ linux-headers make nginx nodejs npm postgresql postgresql-dev readline-dev zlib zlib-dev sqlite-dev
+RUN apk add --no-cache bash curl git gcc g++ linux-headers make nginx nodejs npm postgresql postgresql-dev readline-dev zlib zlib-dev sqlite-dev
 
 # copy scripts
 COPY setup-ruby /tmp/
