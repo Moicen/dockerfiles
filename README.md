@@ -7,6 +7,8 @@ default user: admin
 
 ## ror-base
 
+alpine 3.8
+
 packages: 
 
 ```
